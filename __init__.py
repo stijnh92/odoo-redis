@@ -29,9 +29,7 @@ class RedisSessionStore(SessionStore):
         return self.session_class({}, self.generate_key(self.generate_salt), True)
 
     def get_session_key(self, sid):
-        if isinstance(sid, unicode):
-            sid = sid.encode('utf-8')
-
+        sid = sid.encode('utf-8')
         return self.key_template % sid
 
     def save(self, session):
