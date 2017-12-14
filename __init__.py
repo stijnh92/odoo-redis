@@ -8,7 +8,7 @@ from openerp.http import session_gc
 
 from werkzeug.contrib.sessions import SessionStore
 
-import cPickle
+import pickle as cPickle
 import logging
 import redis
 
